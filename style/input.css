@@ -57,6 +57,22 @@
     margin-left: 24px;
   }
 
+  .site-notice {
+    background: rgba(11, 11, 11, 0.85);
+  }
+
+  .notice-panel {
+    background: rgba(11, 11, 11, 0.92);
+    transform: translateY(16px);
+    opacity: 0;
+    transition: transform 560ms ease, opacity 560ms ease;
+  }
+
+  .site-notice.show .notice-panel {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
   .soft-edges {
     position: relative;
     overflow: hidden;

@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style/output.css">
 </head>
 <body class="overflow-x-hidden">
+    <div id="site-notice" class="site-notice fixed inset-0 z-50 items-center justify-center px-6" style="display: none;">
+        <div class="notice-panel border border-gold/40 p-6 text-center text-white shadow-2xl">
+            <p class="text-sm uppercase tracking-[0.3em] text-gold/80">Avrora Atelier</p>
+            <p class="mt-4 text-lg">
+                Этот сайт — демонстрационный пример и не содержит активного функционала.
+                По вашему запросу мы с радостью реализуем именно то, что вам нужно.
+            </p>
+            <button id="site-notice-close" class="mt-6 border border-gold/60 px-6 py-3 text-sm uppercase tracking-wide text-gold hover:bg-gold hover:text-black">
+                Понятно
+            </button>
+        </div>
+    </div>
     <div class="min-h-screen text-white bg-grain">
         <header class="relative overflow-hidden hero-bg">
             <div class="mx-auto max-w-6xl px-6 py-20 md:py-28">
@@ -186,5 +198,43 @@
             </div>
         </section>
     </div>
+    <script>
+        const siteNotice = document.getElementById('site-notice');
+        const siteNoticeClose = document.getElementById('site-notice-close');
+        const showNotice = () => {
+            if (!siteNotice) return;
+            siteNotice.style.display = 'flex';
+            requestAnimationFrame(() => {
+                siteNotice.classList.add('show');
+            });
+        };
+        const hideNotice = () => {
+            if (!siteNotice) return;
+            siteNotice.classList.remove('show');
+            siteNotice.style.display = 'none';
+        };
+
+        document.querySelectorAll('button').forEach((button) => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                showNotice();
+            });
+        });
+
+        if (siteNotice) {
+            siteNotice.addEventListener('click', (event) => {
+                if (event.target === siteNotice) {
+                    hideNotice();
+                }
+            });
+        }
+
+        if (siteNoticeClose) {
+            siteNoticeClose.addEventListener('click', (event) => {
+                event.preventDefault();
+                hideNotice();
+            });
+        }
+    </script>
 </body>
 </html>
