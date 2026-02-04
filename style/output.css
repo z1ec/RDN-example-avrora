@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Kosolapa Script";
+
+  src: url("../fonts/Kosolapa Script/KosolapaScript-Regular.ttf") format("truetype");
+
+  font-weight: 400;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -555,7 +567,7 @@ video {
 }
 
 html {
-  font-family: Inter, sans-serif;
+  font-family: Galliard Antiqua, serif;
 }
 
 body {
@@ -814,13 +826,22 @@ body {
   text-align: center;
 }
 
+.font-body {
+  font-family: Galliard Antiqua, serif;
+}
+
 .font-heading {
-  font-family: Playfair Display, serif;
+  font-family: Kosolapa Script, cursive;
 }
 
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -836,6 +857,11 @@ body {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .uppercase {

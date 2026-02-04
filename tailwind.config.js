@@ -28,8 +28,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        heading: ["Playfair Display", "serif"],
-        body: ["Inter", "sans-serif"],
+        heading: ["Kosolapa Script", "cursive"],
+        body: ["Galliard Antiqua", "serif"],
       },
     },
   },
