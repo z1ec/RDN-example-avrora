@@ -600,6 +600,10 @@ body {
   margin-right: auto;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -610,6 +614,10 @@ body {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-6 {
@@ -648,6 +656,10 @@ body {
   height: 100%;
 }
 
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -658,6 +670,10 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-3xl {
@@ -808,9 +824,9 @@ body {
   padding-bottom: 3.5rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-3 {
@@ -824,6 +840,10 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .font-body {
@@ -866,6 +886,10 @@ body {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
 }
 
 .leading-tight {
@@ -911,6 +935,10 @@ body {
   color: rgb(245 245 245 / 0.7);
 }
 
+.text-white\/75 {
+  color: rgb(245 245 245 / 0.75);
+}
+
 .text-white\/80 {
   color: rgb(245 245 245 / 0.8);
 }
@@ -943,12 +971,40 @@ body {
 
 .hero-bg {
   background-image:
-      linear-gradient(90deg, rgba(11, 11, 11, 0.85) 0%, rgba(11, 11, 11, 0) 25%, rgba(11, 11, 11, 0) 75%, rgba(11, 11, 11, 0.85) 100%),
-      radial-gradient(circle at 50% 35%, rgba(11, 11, 11, 0) 0%, rgba(11, 11, 11, 0.65) 70%, rgba(11, 11, 11, 0.9) 100%),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.62) 22%, rgba(0, 0, 0, 0.28) 46%, rgba(0, 0, 0, 0.08) 68%, rgba(0, 0, 0, 0) 100%),
+      url("../img/0987.png");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+.hero-section {
+  min-height: 70vh;
+}
+
+.craft-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.craft-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+      linear-gradient(90deg, rgba(8, 8, 8, 0.04) 0%, rgba(8, 8, 8, 0.12) 32%, rgba(8, 8, 8, 0.32) 65%, rgba(8, 8, 8, 0.5) 100%),
+      linear-gradient(180deg, rgba(8, 8, 8, 0.38) 0%, rgba(8, 8, 8, 0.12) 38%, rgba(8, 8, 8, 0.36) 100%),
       url("../img/bg_hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+.craft-bg > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-divider {
@@ -1058,9 +1114,9 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .md\:text-4xl {
